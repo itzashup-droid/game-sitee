@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome</title>
+
+<style>
+body{
+    margin:0;
+    background:black;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+    flex-direction:column;
+}
+
+button{
+    padding:20px 40px;
+    font-size:22px;
+    cursor:pointer;
+}
+
+h1{
+    display:none;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<button onclick="playSong()">Click to Enter</button>
+
+<h1 id="msg">Welcome!</h1>
+
+<audio id="music">
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function playSong(){
+
+document.querySelector("button").style.display="none";
+
+document.getElementById("msg").style.display="block";
+
+document.getElementById("music").play();
+
+}
+
+</script>
+
+</body>
+</html>
